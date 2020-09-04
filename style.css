@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(to top left, skyblue, white)fixed;
+    /* background: linear-gradient(to top left, skyblue, white)fixed; */
 }
 
 a:hover {
@@ -112,8 +112,7 @@ img {
 
 .box-container {
     position: relative;
-    height: 90vh;
-    ;
+    height: 100vh;
 }
 
 .title {
@@ -128,8 +127,8 @@ img {
 .box-container .boxes {
     display: flex;
     justify-content: space-around;
-    align-self: center;
     flex-wrap: wrap;
+    min-height: 90%;
 }
 
 
@@ -138,8 +137,9 @@ img {
     font-size: 1.3em;
     text-align: center;
     border: 1px solid black;
+    align-self: center;
     border-radius: 10px;
-    width: 200px;
+    width: 250px;
     margin: 30px 0;
     padding: 15px;
     box-shadow: 0 0 10px black;
@@ -160,6 +160,7 @@ img {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    transition: all 0.5s ease;
 }
 
 .work .sidenav li {
@@ -204,6 +205,7 @@ img {
     width: 60%;
     height: 350px;
     background: #FFF;
+    transition: all 0.5s ease;
 }
 
 .work .details .img {
@@ -286,10 +288,11 @@ img {
 
 .form {
     /* border: .1px solid black; */
-    margin-top: 100px;
+    /* margin-top: 40px; */
     border-radius: 50px;
     width: 50%;
     padding: 20px 30px;
+    height: 85%;
     box-shadow: 0 0 20px black;
 }
 
@@ -299,7 +302,7 @@ img {
     letter-spacing: 3px;
     border-bottom: 2px solid;
     font-size: 2em;
-    line-height: 28px;
+    line-height: 25px;
     padding-bottom: 20px;
     color: #5543ca;
     background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
@@ -314,7 +317,7 @@ img {
 
 .contact-form .form-field {
     position: relative;
-    margin: 18px auto;
+    margin: 20px auto;
     padding: 0 10px;
 }
 
