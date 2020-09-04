@@ -1,0 +1,519 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to top left, skyblue, white)fixed;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    width: max-content;
+}
+
+.nav-icon {
+    display: inline-block;
+    width: 35px;
+}
+
+.navbar-toggler {
+    padding: 5px 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.active .bar1 {
+    transform: translateY(8px) rotate(135deg);
+}
+
+.active .bar2 {
+    opacity: 0;
+}
+
+.active .bar3 {
+    transform: translateY(-8px) rotate(-135deg);
+}
+
+.bg-light {
+    background-color: #FFF !important;
+}
+
+.navbar-light .navbar-brand {
+    color: black;
+    font-size: 1.5em;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.dropdown-item {
+    color: black;
+    font-size: 1.1rem;
+    transition: all 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.dropdown-item:hover,
+.navbar-light .navbar-nav .nav-item>.active {
+    color: white;
+    background: #000;
+    border-radius: 10px;
+}
+
+.navbar-nav {
+    width: 80%;
+}
+
+/* ######################carousel imgages modificaton#################### */
+.carousel img {
+    width: 100%;
+    height: 90vh;
+}
+
+.carousel-caption {
+    top: 40%;
+    left: 30%;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.carousel-caption h2 {
+    color: tomato;
+}
+
+.carousel-caption p {
+    color: white;
+}
+
+.heading {
+    width: fit-content;
+}
+
+.underline {
+    height: 3px;
+    width: 50%;
+    background: #ff9800;
+}
+
+.box-container {
+    position: relative;
+    height: 90vh;
+    ;
+}
+
+.title {
+    display: block;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 600;
+    color: black;
+    margin-top: 20px;
+}
+
+.box-container .boxes {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+
+.boxes .box {
+    position: relative;
+    font-size: 1.3em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    margin: 30px 0;
+    padding: 15px;
+    box-shadow: 0 0 10px black;
+}
+
+.box h1 {
+    color: tomato;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.work {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.work .sidenav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.work .sidenav li {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.work .sidenav li:hover {
+    box-shadow: 0 0 10px black;
+}
+
+.work .sidenav li a {
+    color: black;
+    font-weight: 500;
+}
+
+.sidenav .active a {
+    border-bottom-style: groove;
+    text-shadow: 0 0 2px black;
+    border-width: 3px;
+}
+
+.work .details {
+    position: relative;
+    display: none;
+    width: 90%;
+    left: 5%;
+}
+
+.work .details .content {
+    position: absolute;
+    border: 1px solid black;
+    box-shadow: 0 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    left: 30%;
+    width: 60%;
+    height: 350px;
+    background: #FFF;
+}
+
+.work .details .img {
+    position: absolute;
+    height: 350px;
+    left: 4%;
+}
+
+.work .details .img img {
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black, inset 0 0 30px white;
+    top: 7%;
+    width: 350px;
+    height: 300px;
+    z-index: -1;
+}
+
+.work .details .content .heading {
+    color: #ff9800;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-bottom: 5px groove black;
+}
+
+.work .details .content p {
+    padding: 5px;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.work .details .content p {
+    z-index: 2;
+    color: black;
+}
+
+.work .active {
+    display: block;
+}
+
+.todo {
+    position: relative;
+}
+
+.todo-container {
+    margin-top: 10px;
+    display: flex;
+    padding: 20px;
+    border: 1px solid;
+}
+
+.todo-container .text {
+    text-align: center;
+    align-self: center;
+    font-weight: 500;
+}
+
+.todo-container .text p {
+    font-size: 1.2em;
+}
+
+.todo-container .img {
+    height: 60vh;
+}
+
+.todo-container .img img {
+    height: 100%;
+    width: 100%;
+}
+
+.fa-arrow-right,
+.fa-arrow-left {
+    color: #000;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.form {
+    /* border: .1px solid black; */
+    margin-top: 100px;
+    border-radius: 50px;
+    width: 50%;
+    padding: 20px 30px;
+    box-shadow: 0 0 20px black;
+}
+
+.get_in_touch .title {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    border-bottom: 2px solid;
+    font-size: 2em;
+    line-height: 28px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form .form-field {
+    position: relative;
+    margin: 18px auto;
+    padding: 0 10px;
+}
+
+.contact-form .input-text {
+
+    display: block;
+    margin: 0 10px;
+    padding: 10px;
+    width: 100%;
+    height: 15px;
+    border-width: 0 0 2px 0;
+    border-color: #5543ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
+    transform: translateY(-14px);
+}
+
+.contact-form .input-text:focus {
+    outline: none;
+}
+
+.contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.contact-form .submit-btn {
+    display: inline-block;
+    background-image: linear-gradient(125deg, #a72879, #064497);
+    color: #fff;
+    text-transform: uppercase;
+    align-self: center;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+
+}
+
+.contact-form .submit-btn:hover {
+    box-shadow: 0 0 20px;
+}
+
+.footer {
+    width: 100%;
+    font-size: 1em;
+    background: #00121b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    min-height: 100%;
+    padding: 10px;
+
+}
+
+.footer-item h1 {
+    color: white;
+    transition: all 0.2s;
+}
+
+.footer-item p {
+    color: #777;
+    transition: all 0.2s;
+}
+
+.footer-item h2 {
+    color: #888;
+    transition: all 0.2s;
+}
+
+.border {
+    height: 2px;
+    width: 50%;
+    margin-top: -10px;
+    border: transparent !important;
+    background: #ff9800;
+}
+
+.footer-item ul li {
+    margin: 6px 0;
+}
+
+.footer-item ul li a {
+    color: white;
+    transition: all 0.2s;
+
+    text-decoration-line: none;
+}
+
+.footer-item h1:hover,
+.footer-item h2:hover,
+.footer-item p:hover,
+.footer-item ul li a:hover,
+.footer-item ul li:hover {
+    cursor: pointer;
+    color: #ff9800;
+    text-shadow: 0 0 5px 15px #ff9800;
+}
+
+.footer-item ul li i {
+    padding: 5px;
+}
+
+.footer-item ul li {
+    color: #888;
+}
+
+.footer-item .social-media ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5px;
+    justify-content: space-around;
+}
+
+.footer-item .social-media ul li {
+    color: #aaa;
+    font-size: 2em;
+    transition: all 0.4s;
+}
+
+.footer-item .social-media ul li:hover {
+    color: #ff9800;
+    text-shadow: 0 0 10px 15px #ff9800;
+}
+
+
+
+/* ########################All media query goes here######################## */
+@media screen and (max-width:530px) {
+
+    .work .details {
+        height: 80vh;
+        line-height: 25px;
+    }
+
+    .work .details .img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+
+    .work .details .img img {
+        top: 0;
+        width: 100%;
+        height: 90%;
+    }
+
+    .work .details .content {
+        width: 100%;
+        left: 0;
+        color: white;
+        height: 90%;
+        background: transparent;
+    }
+
+
+    .todo-container {
+        margin-top: 10px;
+        display: block;
+        padding: 20px;
+        border: 1px solid;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .box-container {
+        height: auto;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
