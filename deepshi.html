@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>slick slider</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <style type="text/css">
+        body {
+            background-color: #2c3e50;
+            font-family: lato;
+        }
+
+        .details {
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .details h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+            transition: 0.6s all;
+        }
+
+        .details p {
+            font-size: 14px;
+            transition: 0.6s all;
+        }
+
+        .details a {
+            text-decoration: nonr;
+            text-transform: capitalize;
+            color: #fff;
+            background-color: #2c3e50;
+            padding: 6px 12px;
+            display: inline-block;
+            font-size: 14px;
+            border: 1px solid #2c3e50;
+            transition: 0.6s all;
+        }
+
+        .details::before {
+            content: "";
+            width: 5px;
+            height: 100%;
+            background-color: #ff5722;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: 0.6s all;
+        }
+
+        .details:hover::before {
+            width: 100%;
+        }
+
+        .details:hover h2,
+        .details:hover p {
+            color: #fff;
+        }
+
+        .details:hover a {
+            background-color: transparent;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row slider">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-11 ">
+                <div class="details">
+                    <h2>heading</h2>
+                    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove
+                        bottom margins for a p element if it is the last child (or the only one) in card-body.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-11">
+                <div class="details">
+                    <h2>heading</h2>
+                    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove
+                        bottom margins for a p element if it is the last child (or the only one) in card-body.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-11">
+                <div class="details">
+                    <h2>heading</h2>
+                    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove
+                        bottom margins for a p element if it is the last child (or the only one) in card-body.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-11">
+                <div class="details">
+                    <h2>heading</h2>
+                    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove
+                        bottom margins for a p element if it is the last child (or the only one) in card-body.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-11">
+                <div class="details">
+                    <h2>heading</h2>
+                    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove
+                        bottom margins for a p element if it is the last child (or the only one) in card-body.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-11">
+                <div class="details">
+                    <h2>heading</h2>
+                    <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove
+                        bottom margins for a p element if it is the last child (or the only one) in card-body.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [{
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    }, 
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 700,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

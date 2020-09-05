@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@600&family=Roboto+Condensed:wght@700&family=Ubuntu:wght@500&display=swap');
+:root{
+    --poppins:'Poppins', sans-serif;
+    --pacifico:'Pacifico', cursive;
+    --roboto:'Roboto Condensed', sans-serif;
+    --ubuntu:'Ubuntu', sans-serif;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -58,6 +64,7 @@ img {
 .navbar-light .navbar-brand {
     color: black;
     font-size: 1.5em;
+    font-family: var(--pacifico);
 }
 
 .navbar-light .navbar-nav .nav-link,
@@ -65,6 +72,7 @@ img {
     color: black;
     font-size: 1.1rem;
     transition: all 0.4s;
+    font-family: var(--poppins);
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -90,6 +98,7 @@ img {
     left: 30%;
     font-size: 1.5em;
     font-weight: 700;
+    font-family: var(--ubuntu);
 }
 
 .carousel-caption h2 {
@@ -112,23 +121,27 @@ img {
 
 .box-container {
     position: relative;
-    height: 100vh;
+    height: 90vh;
 }
 
 .title {
     display: block;
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2.3em;
     font-weight: 600;
     color: black;
     margin-top: 20px;
+    font-family: var(--ubuntu);
+}
+.WWR .heading .title{
+    margin-top: 100px;
 }
 
 .box-container .boxes {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    min-height: 90%;
+    min-height: 240px;
 }
 
 
@@ -137,7 +150,6 @@ img {
     font-size: 1.3em;
     text-align: center;
     border: 1px solid black;
-    align-self: center;
     border-radius: 10px;
     width: 250px;
     margin: 30px 0;
@@ -148,9 +160,12 @@ img {
 .box h1 {
     color: tomato;
     font-weight: 600;
-    font-size: 2.5em;
+    font-size: 4.5em;
+    font-family: var(--ubuntu);
 }
-
+.box h5 {
+    font-family: var(--pacifico);
+}
 .work {
     width: 100%;
     margin: 25px 0;
@@ -165,33 +180,35 @@ img {
 
 .work .sidenav li {
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 50px;
     width: 150px;
-    padding: 5px;
+    padding: 15px 5px;
     margin: 5px;
     text-align: center;
+    color:black;
+    font-size:1em;
+    font-family: var(--poppins);
+    transition: all 0.2s ;
 }
 
 .work .sidenav li:hover {
-    box-shadow: 0 0 10px black;
+    background: tomato;
+    color: white !important;
 }
-
-.work .sidenav li a {
-    color: black;
-    font-weight: 500;
+.sidenav .active{
+    border: none !important;
+    background: tomato;
+    color: white !important;
+    box-shadow: none !important;
 }
-
-.sidenav .active a {
-    border-bottom-style: groove;
-    text-shadow: 0 0 2px black;
-    border-width: 3px;
-}
-
 .work .details {
     position: relative;
     display: none;
-    width: 90%;
+    width: 80%;
     left: 5%;
+    margin: 50px 0;
+    
+    font-family: var(--poppins);
 }
 
 .work .details .content {
@@ -254,7 +271,7 @@ img {
     margin-top: 10px;
     display: flex;
     padding: 20px;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .todo-container .text {
@@ -262,8 +279,11 @@ img {
     align-self: center;
     font-weight: 500;
 }
-
+.todo-container .text .title{
+    font-family: var(--roboto);
+}
 .todo-container .text p {
+    font-family: var(--pacifico);
     font-size: 1.2em;
 }
 
@@ -289,7 +309,8 @@ img {
 .form {
     /* border: .1px solid black; */
     /* margin-top: 40px; */
-    border-radius: 50px;
+    margin:100px 0;
+    border-radius: 5px;
     width: 50%;
     padding: 20px 30px;
     height: 85%;
